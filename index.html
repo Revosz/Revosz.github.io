@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REVOS | Game Developer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanlines"></div>
+<div class="noise"></div>
+<canvas id="bgCanvas"></canvas>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo" data-text="REVOS">REVOS</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#showcase">Showcase</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+  <div class="menu-toggle" id="menuToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-content">
+    <p class="hero-hello">Let's make your dreams come true</p>
+    <h1 class="hero-name"><span class="glitch-text" data-text="REVOS">REVOS</span></h1>
+    <p class="hero-tagline" id="heroTagline">Scripter &bull; Systems Engineer &bull; Game Developer</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span><span class="stat-label">Satisfaction</span></div>
+    </div>
+    <a href="#showcase" class="hero-cta primary"><span>View My Work</span><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+  <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"></div></div>
+  <div class="hero-corner tl"></div>
+  <div class="hero-corner tr"></div>
+  <div class="hero-corner bl"></div>
+  <div class="hero-corner br"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header reveal">
+    <span class="section-label">// PROFILE</span>
+    <h2 class="section-title">About <span class="accent">Revos</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-content">
+    <div class="about-text reveal">
+      <p>I'm <span class="highlight">Revos</span>, a scripter and systems engineer. I build clean, scalable game systems that run fast, ship on time, and keep players coming back. From <span class="highlight">refactoring legacy codebases</span> into modular architectures, to engineering <span class="highlight">gameplay systems that just work</span>, studios hire me when they need results. Your project deserves solid engineering. <span class="highlight">Let's build something worth playing.</span></p>
+      <div class="about-tags">
+        <span>Luau</span><span>Roblox Studio</span><span>Game Systems</span><span>Refactoring</span><span>Modularization</span><span>Optimization</span><span>Networking</span><span>MVC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section id="showcase">
+  <div class="section-header reveal">
+    <span class="section-label">// REEL</span>
+    <h2 class="section-title">Work In <span class="accent">Action</span></h2>
+    <div class="section-line"></div>
+    <p class="section-sub">See what your investment looks like.</p>
+  </div>
+  <div class="showcase-grid four-col">
+    <div class="video-card reveal-scale">
+      <div class="video-embed" data-id="LjdUNp2zN6g">
+        <img src="https://img.youtube.com/vi/LjdUNp2zN6g/maxresdefault.jpg" alt="Placement / Building System" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+      <div class="video-info"><div class="video-tag">SYSTEMS</div><h3>Placement / Building System</h3></div>
+    </div>
+    <div class="video-card reveal-scale">
+      <div class="video-embed" data-id="lCo29CaYKEI">
+        <img src="https://img.youtube.com/vi/lCo29CaYKEI/maxresdefault.jpg" alt="Dialogue System" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+      <div class="video-info"><div class="video-tag">SCRIPTING</div><h3>Dialogue System</h3></div>
+    </div>
+    <div class="video-card reveal-scale">
+      <div class="video-embed" data-id="72PfY3-JjL0">
+        <img src="https://img.youtube.com/vi/72PfY3-JjL0/maxresdefault.jpg" alt="Spin / Inventory System" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+      <div class="video-info"><div class="video-tag">GAMEPLAY</div><h3>Spin / Inventory System</h3></div>
+    </div>
+    <div class="video-card reveal-scale">
+      <div class="video-embed" data-id="rg470gpmmy8">
+        <img src="https://img.youtube.com/vi/rg470gpmmy8/maxresdefault.jpg" alt="Connect Four System" loading="lazy">
+        <div class="play-btn"></div>
+      </div>
+      <div class="video-info"><div class="video-tag">LOGIC</div><h3>Connect Four System</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header reveal">
+    <span class="section-label">// COMPLETED</span>
+    <h2 class="section-title">Games I've <span class="accent">Shipped</span></h2>
+    <div class="section-line"></div>
+    <p class="section-sub">Every project below made money. <span class="highlight">Yours could be next.</span></p>
+  </div>
+  <div class="projects-compact">
+    <div class="proj-row reveal-scale">
+      <div class="proj-thumb img">
+        <a href="https://www.roblox.com/games/95925325067651/Connect-Em#!/game-instances" target="_blank">
+          <img src="https://tr.rbxcdn.com/180DAY-f270f8aa1f42e7f5eb5f10475a7aef93/768/432/Image/Webp/noFilter" alt="Connect Em">
+        </a>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tags"><span>Roblox</span><span>Luau</span><span>MVC Architecture</span></div>
+        <h3>Connect Em</h3>
+        <p>Scripted the core game loop, matchmaking, win-streak tracking, and shop system. Built VC-enabled server infrastructure and multiple gamemode support from scratch.</p>
+      </div>
+    </div>
+    <div class="proj-row reveal-scale">
+      <div class="proj-thumb img">
+        <a href="https://www.roblox.com/games/78934162817711/Mini-Kingdoms" target="_blank">
+          <img src="https://tr.rbxcdn.com/180DAY-ba5fdadff5e5b0acd842373203cb8369/768/432/Image/Webp/noFilter" alt="Mini Kingdoms">
+        </a>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tags"><span>Roblox</span><span>Luau</span><span>Combat Systems</span></div>
+        <h3>Mini Kingdoms</h3>
+        <p>Engineered the placement/building system, resource gathering pipeline, army training logic, and leaderboard integration. Full kingdom simulation running server-side with client prediction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 <span class="accent">REVOS</span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
