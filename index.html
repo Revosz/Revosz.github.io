@@ -3,28 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REVOS | Game Developer</title>
-<meta property="og:title" content="REVOS | Roblox Scripter & Systems Engineer">
-<meta property="og:description" content="Clean code. Fast builds. Happy players. Let's build something worth playing.">
+<title>REVOS — Game Developer</title>
+<meta property="og:title" content="REVOS — Roblox Scripter & Systems Engineer">
+<meta property="og:description" content="Clean code. Fast builds. Happy players. Contributed to 110M+ visits.">
 <meta property="og:image" content="https://i.imgur.com/kqUKea6.png">
 <meta property="og:url" content="https://revosz.github.io">
-<meta name="theme-color" content="#e53e3e">
+<meta name="theme-color" content="#c9a961">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="scanlines"></div>
-<div class="noise"></div>
-<canvas id="bgCanvas"></canvas>
+<div class="ambient"></div>
+<div class="particles" id="particles"></div>
+<div class="page-frame" aria-hidden="true">
+  <span class="pf-corner tl"></span>
+  <span class="pf-corner tr"></span>
+  <span class="pf-corner bl"></span>
+  <span class="pf-corner br"></span>
+</div>
 
 <!-- NAV -->
 <nav id="navbar">
-  <div class="nav-logo" data-text="REVOS">REVOS</div>
+  <div class="nav-logo">REVOS</div>
   <ul class="nav-links" id="navLinks">
     <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#showcase">Showcase</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#projects">Portfolio</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#vouches">Vouches</a></li>
   </ul>
   <div class="menu-toggle" id="menuToggle">
     <span></span><span></span><span></span>
@@ -33,118 +39,146 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-grid-bg"></div>
   <div class="hero-content">
-    <p class="hero-hello">Let's make your dreams come true</p>
-    <h1 class="hero-name"><span class="glitch-text" data-text="REVOS">REVOS</span></h1>
-    <p class="hero-tagline" id="heroTagline">Scripter &bull; Systems Engineer &bull; Game Developer</p>
+    <p class="hero-eyebrow">Let me make your dreams come true</p>
+    <div class="hero-divider"><span></span></div>
+    <h1 class="hero-name">Revos</h1>
+    <p class="hero-tagline">Scripter • Designer • Polish Expert</p>
     <div class="hero-stats">
-      <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span><span class="stat-label">Satisfaction</span></div>
+      <div class="stat headline">
+        <div class="stat-row"><span class="stat-num">110</span><span class="stat-plus">M+</span></div>
+        <span class="stat-label">Visits Contributed</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat headline">
+        <div class="stat-row"><span class="stat-num">15</span><span class="stat-plus">+</span></div>
+        <span class="stat-label">Satisfied Clients</span>
+      </div>
     </div>
-    <a href="#showcase" class="hero-cta primary"><span>View My Work</span><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="#projects" class="hero-cta">View the Portfolio</a>
   </div>
-  <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"></div></div>
-  <div class="hero-corner tl"></div>
-  <div class="hero-corner tr"></div>
-  <div class="hero-corner bl"></div>
-  <div class="hero-corner br"></div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
+  <span class="section-corner tl"></span><span class="section-corner tr"></span>
+  <span class="section-corner bl"></span><span class="section-corner br"></span>
   <div class="section-header reveal">
-    <span class="section-label">// PROFILE</span>
+    <span class="section-label">&mdash; Profile &mdash;</span>
     <h2 class="section-title">About <span class="accent">Revos</span></h2>
-    <div class="section-line"></div>
   </div>
-  <div class="about-content">
-    <div class="about-text reveal">
-      <p>I'm <span class="highlight">Revos</span>, a scripter and systems engineer. I build clean, scalable game systems that run fast, ship on time, and keep players coming back. From <span class="highlight">refactoring legacy codebases</span> into modular architectures, to engineering <span class="highlight">gameplay systems that just work</span>, studios hire me when they need results. Your project deserves solid engineering. <span class="highlight">Let's build something worth playing.</span></p>
-      <div class="about-tags">
-        <span>Luau</span><span>Roblox Studio</span><span>Game Systems</span><span>Refactoring</span><span>Modularization</span><span>Optimization</span><span>Networking</span><span>MVC</span>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- SHOWCASE -->
-<section id="showcase">
-  <div class="section-header reveal">
-    <span class="section-label">// REEL</span>
-    <h2 class="section-title">Work In <span class="accent">Action</span></h2>
-    <div class="section-line"></div>
-    <p class="section-sub">See what your investment looks like.</p>
-  </div>
-  <div class="showcase-grid four-col">
-    <div class="video-card reveal-scale">
-      <div class="video-embed" data-id="LjdUNp2zN6g">
-        <img src="https://img.youtube.com/vi/LjdUNp2zN6g/maxresdefault.jpg" alt="Placement / Building System" loading="lazy">
-        <div class="play-btn"></div>
-      </div>
-      <div class="video-info"><div class="video-tag">SYSTEMS</div><h3>Placement / Building System</h3></div>
+  <div class="about-grid reveal">
+    <div class="about-bio">
+      <p class="about-lede"></p>
+      <p>Studios hire me because I do it right and I know what they want. They hire me to make them a game that makes them money. That means clean, modular systems that are delivered on time, run smooth, and keep players coming back.</p>
+      <p class="pillar-line"><strong>Player feel is my priority.</strong> Polish, sounds, feedback, pacing, feel. Every system I create plays and feels right. I know as a player and as a dev what people want.</p>
+      <p class="about-close"><em>Your project deserves to be done the right way. Let me build it for you.</em></p>
     </div>
-    <div class="video-card reveal-scale">
-      <div class="video-embed" data-id="lCo29CaYKEI">
-        <img src="https://img.youtube.com/vi/lCo29CaYKEI/maxresdefault.jpg" alt="Dialogue System" loading="lazy">
-        <div class="play-btn"></div>
-      </div>
-      <div class="video-info"><div class="video-tag">SCRIPTING</div><h3>Dialogue System</h3></div>
-    </div>
-    <div class="video-card reveal-scale">
-      <div class="video-embed" data-id="72PfY3-JjL0">
-        <img src="https://img.youtube.com/vi/72PfY3-JjL0/maxresdefault.jpg" alt="Spin / Inventory System" loading="lazy">
-        <div class="play-btn"></div>
-      </div>
-      <div class="video-info"><div class="video-tag">GAMEPLAY</div><h3>Spin / Inventory System</h3></div>
-    </div>
-    <div class="video-card reveal-scale">
-      <div class="video-embed" data-id="rg470gpmmy8">
-        <img src="https://img.youtube.com/vi/rg470gpmmy8/maxresdefault.jpg" alt="Connect Four System" loading="lazy">
-        <div class="play-btn"></div>
-      </div>
-      <div class="video-info"><div class="video-tag">LOGIC</div><h3>Connect Four System</h3></div>
+
+    <div class="about-facts">
+      <span class="facts-corner tl"></span><span class="facts-corner tr"></span>
+      <span class="facts-corner bl"></span><span class="facts-corner br"></span>
+      <div class="facts-header">At a Glance</div>
+      <div class="fact"><span class="fact-label">Role</span><span class="fact-value">Scripter &middot; Designer &middot; Polish Expert</span></div>
+      <div class="fact"><span class="fact-label">Stack</span><span class="fact-value">Luau &middot; Roblox Studio</span></div>
+      <div class="fact"><span class="fact-label">Timezone</span><span class="fact-value">EST UTC−5</span></div>
+      <div class="fact"><span class="fact-label">Availability</span><span class="fact-value">Open for commissions</span></div>
+      <div class="fact"><span class="fact-label">Payment</span><span class="fact-value">After the job is done</span></div>
+      <div class="fact"><span class="fact-label">Track Record</span><span class="fact-value">110M+ visits contributed</span></div>
+      <div class="fact"><span class="fact-label">Speed</span><span class="fact-value">Faster than what you expect</span></div>
     </div>
   </div>
+
+  <div class="about-pillars reveal">
+    <div class="pillar-card">
+      <span class="pillar-icon">&#9670;</span>
+      <h3>Player First</h3>
+      <p>Every design decision serves how the game <em>feels</em>. That's what keeps players coming back.</p>
+    </div>
+    <div class="pillar-card">
+      <span class="pillar-icon">&#9670;</span>
+      <h3>Modular Code</h3>
+      <p>Clean systems that are easy to add on to. Built to run smooth now and stay solid as you expand.</p>
+    </div>
+    <div class="pillar-card">
+      <span class="pillar-icon">&#9670;</span>
+      <h3>Earn Trust</h3>
+      <p>You pay me once the work is done and you love it. I only take on projects I know I will deliver.</p>
+    </div>
+  </div>
+
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
+  <span class="section-corner tl"></span><span class="section-corner tr"></span>
+  <span class="section-corner bl"></span><span class="section-corner br"></span>
   <div class="section-header reveal">
-    <span class="section-label">// COMPLETED</span>
-    <h2 class="section-title">Games I've <span class="accent">Shipped</span></h2>
-    <div class="section-line"></div>
-    <p class="section-sub">Every project below made money. <span class="highlight">Yours could be next.</span></p>
+    <span class="section-label">&mdash; Selected Works &mdash;</span>
+    <h2 class="section-title">My <span class="accent">Experiences</span></h2>
+    <p class="section-sub">Contributed to <span class="highlight">110M+ visits</span> across these titles.</p>
   </div>
-  <div class="projects-compact">
-    <div class="proj-row reveal-scale">
-      <div class="proj-thumb img">
-        <a href="https://www.roblox.com/games/95925325067651/Connect-Em#!/game-instances" target="_blank">
-          <img src="https://tr.rbxcdn.com/180DAY-f270f8aa1f42e7f5eb5f10475a7aef93/768/432/Image/Webp/noFilter" alt="Connect Em">
-        </a>
-      </div>
-      <div class="proj-info">
-        <div class="proj-tags"><span>Roblox</span><span>Luau</span><span>MVC Architecture</span></div>
-        <h3>Connect Em</h3>
-        <p>Scripted the core game loop, matchmaking, win-streak tracking, and shop system. Built VC-enabled server infrastructure and multiple gamemode support from scratch.</p>
+  <div class="projects-compact" id="gamesList"></div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <span class="section-corner tl"></span><span class="section-corner tr"></span>
+  <span class="section-corner bl"></span><span class="section-corner br"></span>
+  <div class="section-header reveal">
+    <span class="section-label">&mdash; Pricing &mdash;</span>
+    <h2 class="section-title">Quality Per <span class="accent">Dollar</span></h2>
+  </div>
+
+  <div class="pricing-grid reveal">
+    <div class="price-card">
+      <span class="facts-corner tl"></span><span class="facts-corner tr"></span>
+      <span class="facts-corner bl"></span><span class="facts-corner br"></span>
+      <div class="facts-header">Rates</div>
+      <p class="price-lede">Pricing depends on the <span class="highlight">job</span>.</p>
+      <p>We talk about what you need and when you want it done, I quote, and you get much more quality than what you pay for. Simple as that. I look at it from <span class="highlight">YOUR</span> pov, if I hired someone, I want it done right.</p>
+      <div class="price-note">
+        <strong>Revenue Share</strong>
+        <span>I only accept pay in revenue percentage if the group has a proven track record / CCU.</span>
       </div>
     </div>
-    <div class="proj-row reveal-scale">
-      <div class="proj-thumb img">
-        <a href="https://www.roblox.com/games/78934162817711/Mini-Kingdoms" target="_blank">
-          <img src="https://tr.rbxcdn.com/180DAY-ba5fdadff5e5b0acd842373203cb8369/768/432/Image/Webp/noFilter" alt="Mini Kingdoms">
-        </a>
+
+    <div class="price-card">
+      <span class="facts-corner tl"></span><span class="facts-corner tr"></span>
+      <span class="facts-corner bl"></span><span class="facts-corner br"></span>
+      <div class="facts-header">Accepted Payment</div>
+      <div class="methods-grid">
+        <div class="method">PayPal</div>
+        <div class="method">USD</div>
+        <div class="method">Robux</div>
+        <div class="method">Zelle</div>
+        <div class="method">CashApp</div>
       </div>
-      <div class="proj-info">
-        <div class="proj-tags"><span>Roblox</span><span>Luau</span><span>Combat Systems</span></div>
-        <h3>Mini Kingdoms</h3>
-        <p>Engineered the placement/building system, resource gathering pipeline, army training logic, and leaderboard integration. Full kingdom simulation running server-side with client prediction.</p>
-      </div>
+      <p class="methods-foot"><em>Whatever is easiest for you, we will sort it out.</em></p>
     </div>
   </div>
 </section>
 
+<!-- VOUCHES -->
+<section id="vouches">
+  <span class="section-corner tl"></span><span class="section-corner tr"></span>
+  <span class="section-corner bl"></span><span class="section-corner br"></span>
+  <div class="section-header reveal">
+    <span class="section-label">&mdash; Vouches &mdash;</span>
+    <h2 class="section-title">Client <span class="accent">Word</span></h2>
+    <p class="section-sub">What people have said after hiring me.</p>
+  </div>
+  <div class="vouches-grid" id="vouchesList"></div>
+</section>
+
 <footer>
-  <p>&copy; 2026 <span class="accent">REVOS</span></p>
+  <div class="footer-ornament">&#10042;</div>
+  <p>&copy; 2026 &nbsp;&middot;&nbsp; <span class="accent">Revos</span></p>
 </footer>
 
 <script src="script.js"></script>
